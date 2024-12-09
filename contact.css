@@ -1,0 +1,99 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Jost", sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
+  background: #f9f9f9;
+}
+
+.logo {
+  color: black;
+  text-decoration: none;
+  font-size: 22px;
+}
+
+.logo span {
+  color: #25ACFF;
+}
+
+header ul {
+  display: flex;
+  padding-top: 10px;
+}
+
+header ul li {
+  list-style: none;
+}
+
+header ul li a {
+  text-decoration: none;
+  color: black;
+  padding: 0px 23px;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+header li a:hover {
+  color: #25ACFF;
+  text-decoration: underline;
+  font-size: 16px;
+  transition: .4s;
+  font-weight: 450;
+}
+
+.contact-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  margin-top: 36px;
+}
+input{
+  height: 36px;
+  border-radius: 12px;
+  border: 1px solid black;
+  outline: none;
+  width: 456px;
+  padding: 0 8px 0 16px;
+  background-color: var(--color-background-input-field);
+  
+}
+.input-name{
+  display: flex;
+  gap: 12px;
+}
+.input-name input{
+  width: 210px;
+}
+
+.input-message input{
+  height: 60px;
+}
+
+
+
+
+
+
+button {
+  border: none;
+  width: 456px;
+  border-radius: 30px;
+  color: black;
+  padding: 10px 40px;
+  background: #25ACFF;
+  color: black;
+  font-size: 1rem;
+  color: ghostwhite;
+}
+
+button:hover {
+  color: black;
+  background: #47DFFB;
+  transition: .5s;
+}
