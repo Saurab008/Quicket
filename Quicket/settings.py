@@ -20,10 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-from decouple import config
-
-SECRET_KEY = config('SECRET_KEY')
-
+SECRET_KEY = 'django-insecure-fp*=e=8($q65dnwo6(hg*0bep75i8y^olv)o4sxh8!$=d1=14c'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -85,16 +82,19 @@ SECRET_KEY = config('SECRET_KEY')
 DEBUG = config('DEBUG', default=False, cast=bool)
 
 # DATABASE SETTINGS
+from decouple import config
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': config('DB_NAME'),
-        'USER': config('DB_USER'),
-        'PASSWORD': config('DB_PASSWORD'),
+        'NAME': config('DB_NAME', default='quicket'),
+        'USER': config('DB_USER', default='your_username'),
+        'PASSWORD': config('DB_PASSWORD', default='your_password'),
         'HOST': config('DB_HOST', default='127.0.0.1'),
         'PORT': config('DB_PORT', default='5432'),
     }
 }
+
 
 
 
